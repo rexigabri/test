@@ -1,0 +1,72 @@
+items = ["Apple", "Milk", "Bread", "Rice", "Sugar"]
+
+items.append("Eggs")
+items.append("Juice")
+
+print("Shopping Cart:", items)
+
+item = input("Enter item to remove: ")
+if item in items:
+    items.remove(item)
+    print("Item removed successfully")
+else:
+    print("Item not found")
+
+search = input("Enter item to check: ")
+
+if search in items:
+    print(search, "is available")
+else:
+    print(search, "is not available")
+
+print("Total number of items:", len(items))
+
+#set 
+set1 ={10,20,30,40,50}
+set2 ={80,70,60,50,40}
+print("print all numbers: ", set1.union(set2))
+print("common numbers: ",set1.intersection(set2))
+print("numbers in set 1: ", set1)
+set1.add(90)
+print("after adding: ", set1)
+set2.remove(80)
+print("after removing: ",set2)
+
+
+salary = (50000, 60000,70000,80000,90000)
+print("first salary:", salary[0])
+print("last salary: ", salary[-1])
+print("max salary: ", max(salary))
+print("min salary:", min(salary))
+print("count: ", salary.count(80000))
+salarylist = list(salary)
+salarylist.append(40000)
+print("salary:", salarylist)
+#4
+student = {
+    "student": 101,
+    "name": "Rexi",
+    "age": 21,
+    "course": "Python"}
+print("Keys:", student.keys())
+print("Values:", student.values())
+student["email"] = "rexi@gmail.com"
+student["age"] = 22
+del student["course"]
+if "name" in student:
+    print("Name key exists")
+else:
+    print("Name key does not exist")
+
+print("Updated student details:", student)
+#5
+mobile = {"iphone 13": 60000,
+          "iphone16": 80000,
+          "iphone18": 130000,
+          "samsung": 100000,
+          "vivo": 40000}
+print("mobiles:", mobile)
+mobile["realme"]= 30000
+print("after adding:", mobile)
+mobile["iphone13"]=70000
+print("after updated :",mobile)
